@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável - Equilíbrio no Campo</title>
+    <!-- Importação de fonte elegante para o projeto -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS para estruturação ágil e totalmente responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#f3e8ff',     // Lilás bem suave
+                            accent: '#a855f7',    // Roxo brilhante
+                            medium: '#7c3aed',    // Roxo intermediário
+                            dark: '#4c1d95',      // Roxo profundo
+                            deepest: '#2e1065',   // Roxo quase preto
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos CSS puros customizados para polimento extra */
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2e1065 0%, #4c1d95 50%, #7c3aed 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(124, 58, 237, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #a855f7, #4c1d95);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom scrollbar em tons de roxo */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f3e8ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7c3aed;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4c1d95;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+    <!-- Navegação / Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-purple-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <!-- Símbolo geométrico representando agricultura & tecnologia (Roxo) -->
+                <div class="w-10 h-10 rounded-xl bg-brand-medium flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-purple-500/20">
+                    A
+                </div>
+                <span class="font-extrabold text-xl tracking-tight text-brand-deepest">
+                    Agrinho<span class="text-brand-accent">Sustentável</span>
+                </span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#proposta" class="font-semibold text-brand-deepest hover:text-brand-accent transition-colors">A Proposta</a>
+                <a href="#embrapa" class="font-semibold text-brand-deepest hover:text-brand-accent transition-colors">Tecnologia (Embrapa)</a>
+                <a href="#ibama" class="font-semibold text-brand-deepest hover:text-brand-accent transition-colors">Preservação (Ibama)</a>
+                <a href="#fazenda" class="font-semibold text-brand-deepest hover:text-brand-accent transition-colors">Economia (Fazenda)</a>
+            </nav>
+
+            <div>
+                <a href="#conscientizacao" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-medium text-white font-bold text-sm shadow-md hover:bg-brand-dark hover:shadow-lg hover:shadow-purple-500/20 transition-all">
+                    Participe da Mudança
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Destaque do Tema) -->
+    <section class="hero-gradient text-white py-20 lg:py-28 relative overflow-hidden">
+        <!-- Detalhes de fundo geométricos para dar dinamismo sem carregar imagens externas -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-96 h-96 rounded-full bg-white filter blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-brand-accent filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-brand-light text-xs font-bold uppercase tracking-wider">
+                        Tema Oficial Agrinho 2026
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Agro forte, <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-white">futuro sustentável</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-purple-100 max-w-2xl font-light">
+                        O equilíbrio inteligente entre a produção de alimentos de alta qualidade e a preservação rigorosa do meio ambiente. Descubra como o Brasil lidera essa revolução através da ciência, fiscalização e incentivos econômicos.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#proposta" class="px-8 py-3.5 rounded-full bg-white text-brand-deepest hover:bg-brand-light font-bold text-base shadow-xl transition-all">
+                            Entender o Equilíbrio
+                        </a>
+                        <a href="#embrapa" class="px-8 py-3.5 rounded-full bg-transparent border border-white/30 hover:border-white text-white font-bold text-base transition-all">
+                            Ver Tecnologias do Campo
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5">
+                    <!-- Representação visual do equilíbrio (Produção + Natureza) em CSS puro -->
+                    <div class="glass-card p-8 rounded-3xl shadow-2xl text-brand-deepest space-y-6 max-w-md mx-auto relative">
+                        <div class="absolute -top-4 -right-4 bg-yellow-400 text-brand-deepest font-extrabold px-4 py-1 rounded-full text-xs shadow-md">
+                            CONEXÃO DIRETA
+                        </div>
+                        <h3 class="text-2xl font-bold tracking-tight text-center">A Chave da Sustentabilidade</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-brand-light/30 transition-colors">
+                                <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-brand-medium shrink-0 font-bold">
+                                    🌱
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Tecnologia Poupa-Terra</h4>
+                                    <p class="text-xs text-gray-600 mt-0.5">Produzir mais na mesma área evita a necessidade de abrir novas fronteiras de vegetação nativa.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-brand-light/30 transition-colors">
+                                <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-brand-medium shrink-0 font-bold">
+                                    💧
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Conservação de Recursos</h4>
+                                    <p class="text-xs text-gray-600 mt-0.5">Sistemas de plantio e rotação que mantêm a umidade natural do solo e purificam a água.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-brand-light/30 transition-colors">
+                                <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-brand-medium shrink-0 font-bold">
+                                    🔬
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Ciência Aliada ao Produtor</h4>
+                                    <p class="text-xs text-gray-600 mt-0.5">Pesquisas genéticas e bioinsumos desenvolvidos por institutos nacionais de ponta.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 border-t border-purple-100 text-center">
+                            <span class="text-xs text-gray-500 font-semibold">Fonte Científica: EMBRAPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Proposta: Qual a melhor maneira de ter o agro forte e cuidar do planeta? -->
+    <section id="proposta" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">A Solução Prática</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-deepest">Como Unir Força Produtiva e Natureza?</h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Não existe oposição real entre produzir alimentos e proteger o planeta. O segredo está na transição de uma agricultura tradicional para uma agropecuária sustentável de baixa emissão de carbono.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl bg-brand-light/30 border border-purple-100 hover:border-brand-accent/30 transition-all group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-brand-medium text-white flex items-center justify-center font-bold text-xl mb-6 shadow-md shadow-purple-500/20 group-hover:bg-brand-dark">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-deepest mb-3">Intensificação Inteligente</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Recuperar solos degradados e pastagens antigas permite dobrar a produtividade agropecuária sem derrubar uma única árvore. A Embrapa monitora esse progresso continuamente.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl bg-brand-light/30 border border-purple-100 hover:border-brand-accent/30 transition-all group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-brand-medium text-white flex items-center justify-center font-bold text-xl mb-6 shadow-md shadow-purple-500/20 group-hover:bg-brand-dark">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-deepest mb-3">Diversificação Biológica</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Integrar floresta, pecuária e lavoura no mesmo espaço protege a biodiversidade local, melhora o bem-estar animal e gera solo rico e resiliente de forma orgânica.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl bg-brand-light/30 border border-purple-100 hover:border-brand-accent/30 transition-all group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-brand-medium text-white flex items-center justify-center font-bold text-xl mb-6 shadow-md shadow-purple-500/20 group-hover:bg-brand-dark">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-deepest mb-3">Conformidade e Rastreabilidade</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Utilizar o Cadastro Ambiental Rural (CAR) e monitoramento por satélite do IBAMA garante ao consumidor global que aquele alimento respeita as leis de proteção ambiental do Brasil.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMBRAPA Section: Ciência e Tecnologia de Baixo Carbono -->
+    <section id="embrapa" class="py-20 bg-brand-light/20 border-y border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="px-3 py-1 rounded-full bg-purple-100 text-brand-medium text-xs font-bold uppercase tracking-wider">
+                        Ciência e Tecnologia
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-deepest tracking-tight">
+                        O Motor Científico da EMBRAPA
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        A Empresa Brasileira de Pesquisa Agropecuária é líder mundial na adaptação de tecnologias para a agricultura tropical. Seus estudos comprovam que técnicas de baixo carbono aumentam os lucros do agricultor enquanto sequestram CO₂ da atmosfera.
+                    </p>
+
+                    <!-- Stat Highlight -->
+                    <div class="p-6 rounded-2xl bg-white border border-purple-100 shadow-sm space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="text-4xl">🔬</span>
+                            <div>
+                                <h4 class="font-extrabold text-brand-deepest text-lg">Inovação e Pesquisa</h4>
+                                <p class="text-xs text-gray-500">Desenvolvimento de soluções sustentáveis integradas ao solo</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 pt-2 border-t border-purple-500/10">
+                            <div>
+                                <span class="block text-2xl font-black text-brand-medium">+17M</span>
+                                <span class="text-xs text-gray-500">Hectares de Integração Lavoura-Pecuária-Floresta (ILPF)</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-black text-brand-medium">1.1B</span>
+                                <span class="text-xs text-gray-500">De toneladas de CO₂ equivalente mitigados planejados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="text-xl font-bold text-brand-deepest">Tecnologias do Plano ABC+ (Agricultura de Baixa Emissão)</h3>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <!-- Tech 1 -->
+                        <div class="p-5 rounded-xl bg-white shadow-sm border border-purple-100">
+                            <h4 class="font-bold text-brand-medium text-base mb-2">🔄 Plantio Direto</h4>
+                            <p class="text-xs text-gray-600">
+                                Consiste em semear diretamente sobre a palha da colheita anterior, sem arar o solo. Protege a umidade, evita erosão e mantém o carbono preso à terra.
+                            </p>
+                        </div>
+                        
+                        <!-- Tech 2 -->
+                        <div class="p-5 rounded-xl bg-white shadow-sm border border-purple-100">
+                            <h4 class="font-bold text-brand-medium text-base mb-2">🌳 Sistema ILPF</h4>
+                            <p class="text-xs text-gray-600">
+                                Associa culturas agrícolas, pastagem e fileiras de árvores nativas ou comerciais na mesma propriedade, criando sombra natural e retendo matéria orgânica.
+                            </p>
+                        </div>
+
+                        <!-- Tech 3 -->
+                        <div class="p-5 rounded-xl bg-white shadow-sm border border-purple-100">
+                            <h4 class="font-bold text-brand-medium text-base mb-2">🦠 Fixação Biológica de Nitrogênio</h4>
+                            <p class="text-xs text-gray-600">
+                                Substitui fertilizantes industriais poluentes por bactérias naturais que captam o nitrogênio do ar e alimentam a raiz da planta.
+                            </p>
+                        </div>
+
+                        <!-- Tech 4 -->
+                        <div class="p-5 rounded-xl bg-white shadow-sm border border-purple-100">
+                            <h4 class="font-bold text-brand-medium text-base mb-2">⚡ Bioinsumos e Biodefensivos</h4>
+                            <p class="text-xs text-gray-600">
+                                Defensivos biológicos extraídos de microrganismos naturais para combater pragas e doenças, eliminando a dependência de químicos pesados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IBAMA Section: Proteção, Cadastro e Fiscalização Eficiente -->
+    <section id="ibama" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 order-2 lg:order-1 space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <!-- Item 1 -->
+                        <div class="p-6 rounded-2xl bg-brand-deepest text-white space-y-3">
+                            <span class="text-3xl">📡</span>
+                            <h4 class="font-bold text-lg">Sensoriamento por Satélite</h4>
+                            <p class="text-xs text-purple-200">
+                                O Ibama utiliza imagens em tempo real para monitorar todas as propriedades agrícolas registradas no país, combatendo diretamente o desmatamento ilegal.
+                            </p>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="p-6 rounded-2xl bg-brand-light text-brand-deepest space-y-3 border border-purple-200">
+                            <span class="text-3xl">📝</span>
+                            <h4 class="font-bold text-lg">Cadastro Ambiental Rural (CAR)</h4>
+                            <p class="text-xs text-gray-600">
+                                Registro eletrônico obrigatório que delimita APP, Reserva Legal e áreas produtivas. Organiza a conformidade ambiental de cada metro de terra.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-brand-light/30 border border-purple-100">
+                        <p class="text-xs text-brand-deepest italic font-medium">
+                            "A preservação das florestas e das nascentes é fundamental para o próprio sucesso da agricultura, uma vez que o regime de chuvas que alimenta as lavouras depende diretamente do equilíbrio do ecossistema e das florestas preservadas."
+                        </p>
+                        <span class="block text-right text-xs text-gray-500 mt-2 font-bold">— Relatório Técnico de Conservação Ambiental</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
+                    <span class="px-3 py-1 rounded-full bg-purple-100 text-brand-medium text-xs font-bold uppercase tracking-wider">
+                        Fiscalização e Equidade
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-deepest tracking-tight">
+                        O Papel do IBAMA na Valorização do Produtor Legal
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        A fiscalização do IBAMA protege não apenas a floresta, mas também o produtor rural correto. Ao combater o desmatamento ilegal e fraudes fundiárias, o órgão garante que o agronegócio brasileiro mantenha sua reputação intacta perante o exigente mercado internacional.
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-center gap-3">
+                            <span class="text-brand-medium font-bold">✔</span> Proteção das Áreas de Preservação Permanente (APPs) e margens de rios.
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-brand-medium font-bold">✔</span> Integração de dados de desmatamento com restrições imediatas ao crédito financeiro.
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-brand-medium font-bold">✔</span> Incentivo à restauração de biomas com espécies nativas e silvicultura.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MINISTÉRIO DA FAZENDA Section: O Poder de Incentivo Financeiro -->
+    <section id="fazenda" class="py-20 bg-brand-deepest text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute -bottom-20 left-20 w-80 h-80 rounded-full bg-brand-accent filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-brand-light text-xs font-bold uppercase tracking-wider">
+                        Economia Verde
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+                        Ministério da Fazenda: <br> Incentivos que Transformam o Campo
+                    </h2>
+                    <p class="text-purple-100 text-sm sm:text-base leading-relaxed">
+                        A economia é uma das ferramentas mais fortes para a conservação. O Ministério da Fazenda, junto com os órgãos agrícolas, desenvolve políticas de **Finanças Verdes** para incentivar produtores a escolherem o caminho da sustentabilidade.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-6 pt-4">
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-brand-light">📉 Crédito com Juros Reduzidos</h4>
+                            <p class="text-xs text-purple-200">
+                                Agricultores que adotam práticas certificadas pelo Plano ABC (como ILPF e Plantio Direto) ganham taxas de juros reduzidas no Plano Safra.
+                            </p>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-brand-light">🔗 Mercado Regulado de Carbono</h4>
+                            <p class="text-xs text-purple-200">
+                                Incentivos fiscais e desenvolvimento de títulos de crédito que pagam o agricultor pelo carbono que sua plantação ou floresta nativa retém no solo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="p-8 rounded-3xl bg-white/5 border border-white/10 space-y-6">
+                        <h3 class="text-xl font-bold">O Ciclo Econômico Verde</h3>
+                        
+                        <div class="space-y-4 text-xs">
+                            <div class="flex gap-4 items-center p-3 rounded-lg bg-white/5">
+                                <span class="text-lg">🏦</span>
+                                <div>
+                                    <h5 class="font-bold text-brand-light">Captação ESG</h5>
+                                    <p class="text-purple-200">Bancos federais captam recursos focados em investimentos socioambientais.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4 items-center p-3 rounded-lg bg-white/5">
+                                <span class="text-lg">🚜</span>
+                                <div>
+                                    <h5 class="font-bold text-brand-light">Implementação no Campo</h5>
+                                    <p class="text-purple-200">O agricultor investe em bioinsumos, rotação de culturas e preservação.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4 items-center p-3 rounded-lg bg-white/5">
+                                <span class="text-lg">🌍</span>
+                                <div>
+                                    <h5 class="font-bold text-brand-light">Acesso Global</h5>
+                                    <p class="text-purple-200">Alimentos produzidos com selo sustentável acessam os maiores e melhores mercados do planeta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Conscientização e Cidadania (How to contribute) -->
+    <section id="conscientizacao" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Cidadania</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-deepest">Como Nós, Cidadãos, Ajudamos Nesse Futuro?</h2>
+                <p class="text-gray-600">
+                    O equilíbrio não se dá apenas na fazenda, mas também nas escolhas de consumo e nas discussões sociais em nossa comunidade.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Ação 1 -->
+                <div class="p-6 rounded-2xl bg-brand-light/20 border border-purple-100 space-y-4 text-center">
+                    <span class="text-4xl block">🔍</span>
+                    <h4 class="font-bold text-brand-deepest">Consumo Consciente</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Prefira produtos de marcas e produtores que oferecem rastreabilidade e demonstram origem legal de sua matéria-prima.
+                    </p>
+                </div>
+
+                <!-- Ação 2 -->
+                <div class="p-6 rounded-2xl bg-brand-light/20 border border-purple-100 space-y-4 text-center">
+                    <span class="text-4xl block">🚫</span>
+                    <h4 class="font-bold text-brand-deepest">Diga Não ao Desperdício</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Cerca de 30% dos alimentos do mundo são perdidos. Evitar o desperdício diminui a pressão sobre novas áreas produtivas.
+                    </p>
+                </div>
+
+                <!-- Ação 3 -->
+                <div class="p-6 rounded-2xl bg-brand-light/20 border border-purple-100 space-y-4 text-center">
+                    <span class="text-4xl block">💡</span>
+                    <h4 class="font-bold text-brand-deepest">Educação e Ciência</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Apoie programas como o Agrinho, que levam conhecimento científico e consciência ecológica para as escolas rurais e urbanas.
+                    </p>
+                </div>
+
+                <!-- Ação 4 -->
+                <div class="p-6 rounded-2xl bg-brand-light/20 border border-purple-100 space-y-4 text-center">
+                    <span class="text-4xl block">🍂</span>
+                    <h4 class="font-bold text-brand-deepest">Apoie a Agricultura Local</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Consumir da agricultura familiar local reduz os custos logísticos e incentiva o uso responsável do solo da sua região.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Conclusivo e de Engajamento -->
+    <section class="py-16 bg-brand-light/40 border-t border-purple-100">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-deepest">
+                "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"
+            </h3>
+            <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+                Esse é o compromisso de cientistas, governantes, fiscais e produtores. Ao entender e apoiar essas práticas, garantimos alimentos ricos e abundantes hoje, sem comprometer a herança natural do amanhã.
+            </p>
+            <div class="pt-4">
+                <p class="text-xs text-brand-medium font-semibold">Consulte fontes oficiais confiáveis para saber mais:</p>
+                <div class="flex flex-wrap gap-4 justify-center mt-3 text-xs text-gray-500 font-bold">
+                    <a href="https://www.embrapa.br/" target="_blank" class="hover:text-brand-medium transition-colors">EMBRAPA</a>
+                    <span>•</span>
+                    <a href="https://www.gov.br/ibama" target="_blank" class="hover:text-brand-medium transition-colors">IBAMA</a>
+                    <span>•</span>
+                    <a href="https://www.gov.br/fazenda" target="_blank" class="hover:text-brand-medium transition-colors">MINISTÉRIO DA FAZENDA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-brand-deepest text-white py-12 border-t border-purple-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-brand-accent flex items-center justify-center text-white font-extrabold text-sm">
+                            A
+                        </div>
+                        <span class="font-extrabold text-base tracking-tight text-white">
+                            Agrinho<span class="text-brand-accent">Sustentável</span>
+                        </span>
+                    </div>
+                    <p class="text-xs text-purple-300 mt-2">
+                        Portal de Conscientização para o programa educacional Agrinho.
+                    </p>
+                </div>
+                
+                <div class="text-xs text-purple-300 text-center md:text-right space-y-1">
+                    <p>&copy; 2026 Agrinho Sustentável. Desenvolvido para fins educativos.</p>
+                    <p>Produção limpa e conservação: os dois pilares do futuro.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
